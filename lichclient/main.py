@@ -1,33 +1,34 @@
 import os
 import asyncio
 import dotenv
-import httpx
-from authlib.integrations.httpx_client import AsyncOAuth2Client, OAuth2Auth
-import json
-from .models import CharacterEquipmentResponse
+from .blizzard import BlizzardClient
 
 dotenv.load_dotenv()
 
 
 async def main():
 
-    auth_url = "https://oauth.battle.net/token"
+    # auth_url = "https://oauth.battle.net/token"
 
     client_id = os.getenv("WOW_CLIENT_ID")
     client_secret = os.getenv("WOW_CLIENT_SECRET")
 
-    client = AsyncOAuth2Client(client_id, client_secret)
+    async with BlizzardClient(client_id, client_secret) as client:
+        response = await client.get_character_equipment("turing", "dalaran")
+        print(response)
 
-    access_token = await client.fetch_token(auth_url)  # type: ignore
-    auth = OAuth2Auth(token=access_token)
+    # client = AsyncOAuth2Client(client_id, client_secret)
 
-    api_url = "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/equipment?namespace=profile-us"
+    # access_token = await client.fetch_token(auth_url)  # type: ignore
+    # auth = OAuth2Auth(token=access_token)
 
-    with httpx.Client(auth=auth) as client:
-        response = client.get(api_url)
-        json_data = json.dumps(response.json())
-        data = CharacterEquipmentResponse.model_validate_json(json_data)
-        print(data)
+    # api_url = "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/equipment?namespace=profile-us"
+
+    # with httpx.Client(auth=auth) as client:
+    #     response = client.get(api_url)
+    #     json_data = json.dumps(response.json())
+    #     data = CharacterEquipmentResponse.model_validate_json(json_data)
+    #     print(data)
 
 
 def run():
