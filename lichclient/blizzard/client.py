@@ -1,9 +1,8 @@
 from authlib.integrations.httpx_client import AsyncOAuth2Client, OAuth2Auth
 import httpx
-from .models import CharacterEquipmentResponse, Base
+from .response import CharacterEquipmentResponse, Base
 import json
-from typing import TypeVar, Type, Optional, AsyncIterator
-from contextlib import asynccontextmanager
+from typing import TypeVar, Type, Optional
 
 ModelT = TypeVar("ModelT", bound=Base)
 
