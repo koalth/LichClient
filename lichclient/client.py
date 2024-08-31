@@ -38,5 +38,5 @@ class LichClient(ILichClient):
                 name=response.character.name,
                 realm=realm,
                 region=region,
-                item_level=response.itemlevel,
+                item_level=response.item_level,
             )

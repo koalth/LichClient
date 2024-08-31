@@ -29,7 +29,8 @@ class CharacterEquipmentResponse(Base):
     character: CharacterResponse
     equipped_items: List[ItemResponse]
 
-    @computed_field(title="itemlevel")
+    @computed_field()
+    @property
     def item_level(self) -> int:
         slots_to_not_check = set(["TABARD", "SHIRT"])
         item_levels = [
