@@ -1,0 +1,2 @@
+class LichClient:
+    pass
