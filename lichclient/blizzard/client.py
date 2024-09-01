@@ -1,6 +1,6 @@
 from authlib.integrations.httpx_client import AsyncOAuth2Client, OAuth2Auth
 import httpx
-from .response import CharacterEquipmentResponse, Base
+from .response import CharacterEquipmentResponse, Base, CharacterProfileResponse
 import json
 from typing import TypeVar, Type, Optional
 
@@ -62,6 +62,12 @@ class BlizzardClient:
 
         json_data = json.dumps(response.json())
         return data_cls.model_validate_json(json_data)
+
+    async def get_character_profile(
+        self, name: str, realm: str, region: str
+    ) -> CharacterProfileResponse:
+        endpoint = f"/profile/wow/character/{realm.lower()}/{name.lower()}?namespace=profile-us&locale=en_US"
+        return await self._get(endpoint, CharacterProfileResponse)
 
     async def get_character_equipment(
         self, name: str, realm: str

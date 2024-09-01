@@ -1,0 +1,138 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing?namespace=profile-us"
+    }
+  },
+  "id": 228088103,
+  "name": "Turing",
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "ALLIANCE",
+    "name": "Alliance"
+  },
+  "race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/29?namespace=static-11.0.2_55938-us"
+    },
+    "name": "Void Elf",
+    "id": 29
+  },
+  "character_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/8?namespace=static-11.0.2_55938-us"
+    },
+    "name": "Mage",
+    "id": 8
+  },
+  "active_spec": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-specialization/64?namespace=static-11.0.2_55938-us"
+    },
+    "name": "Frost",
+    "id": 64
+  },
+  "realm": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/realm/66?namespace=dynamic-us"
+    },
+    "name": "Dalaran",
+    "id": 66,
+    "slug": "dalaran"
+  },
+  "guild": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/guild/dalaran/the-revenants?namespace=profile-us"
+    },
+    "name": "The Revenants",
+    "id": 109134925,
+    "realm": {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/realm/66?namespace=dynamic-us"
+      },
+      "name": "Dalaran",
+      "id": 66,
+      "slug": "dalaran"
+    },
+    "faction": {
+      "type": "ALLIANCE",
+      "name": "Alliance"
+    }
+  },
+  "level": 80,
+  "experience": 0,
+  "achievement_points": 8260,
+  "achievements": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/achievements?namespace=profile-us"
+  },
+  "titles": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/titles?namespace=profile-us"
+  },
+  "pvp_summary": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/pvp-summary?namespace=profile-us"
+  },
+  "encounters": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/encounters?namespace=profile-us"
+  },
+  "media": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/character-media?namespace=profile-us"
+  },
+  "last_login_timestamp": 1725143825000,
+  "average_item_level": 578,
+  "equipped_item_level": 578,
+  "specializations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/specializations?namespace=profile-us"
+  },
+  "statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/statistics?namespace=profile-us"
+  },
+  "mythic_keystone_profile": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/mythic-keystone-profile?namespace=profile-us"
+  },
+  "equipment": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/equipment?namespace=profile-us"
+  },
+  "appearance": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/appearance?namespace=profile-us"
+  },
+  "collections": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/collections?namespace=profile-us"
+  },
+  "active_title": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/title/61?namespace=static-11.0.2_55938-us"
+    },
+    "name": "Archmage",
+    "id": 61,
+    "display_string": "Archmage {name}"
+  },
+  "reputations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/reputations?namespace=profile-us"
+  },
+  "quests": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/quests?namespace=profile-us"
+  },
+  "achievements_statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/achievements/statistics?namespace=profile-us"
+  },
+  "professions": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/professions?namespace=profile-us"
+  },
+  "covenant_progress": {
+    "chosen_covenant": {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/covenant/2?namespace=static-11.0.2_55938-us"
+      },
+      "name": "Venthyr",
+      "id": 2
+    },
+    "renown_level": 22,
+    "soulbinds": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/dalaran/turing/soulbinds?namespace=profile-us"
+    }
+  },
+  "name_search": "Turing"
+}

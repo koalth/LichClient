@@ -39,3 +39,48 @@ class CharacterEquipmentResponse(Base):
             if item.slot.type not in slots_to_not_check
         ]
         return int(math.floor(statistics.fmean(item_levels)))
+
+
+class CharacterGenderResponse(Base):
+    name: str
+
+
+class CharacterFactionResponse(Base):
+    name: str
+
+
+class CharacterRaceResponse(Base):
+    name: str
+
+
+class CharacterClassResponse(Base):
+    name: str
+
+
+class CharacterActiveSpecResponse(Base):
+    name: str
+
+
+class CharacterRealmResponse(Base):
+    name: str
+
+
+class CharacterGuildResponse(Base):
+    name: str
+    id: int
+
+
+class CharacterProfileResponse(Base):
+    id: int
+    name: str
+    level: int
+    average_item_level: int
+    equipped_item_level: int
+
+    guild: CharacterGuildResponse
+    realm: CharacterRealmResponse
+    active_spec: CharacterActiveSpecResponse
+    character_class: CharacterClassResponse
+    race: CharacterRaceResponse
+    faction: CharacterFactionResponse
+    gender: CharacterGenderResponse
