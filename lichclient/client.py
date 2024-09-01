@@ -33,10 +33,15 @@ class LichClient(ILichClient):
         self, name: str, realm: str, region: str
     ) -> CharacterProfileResponse:
         async with BlizzardClient(self.client_id, self.client_secret) as client:
-            response = await client.get_character_equipment(name, realm)
+            response = await client.get_character_profile(name, realm, region="us")
             return CharacterProfileResponse(
-                name=response.character.name,
-                realm=realm,
+                name=response.name,
+                realm=response.realm.name,
                 region=region,
-                item_level=response.item_level,
+                item_level=response.average_item_level,
+                class_name=response.character_class.name,
+                active_spec=response.active_spec.name,
+                faction=response.faction.name,
+                race=response.race.name,
+                gender=response.gender.name,
             )
